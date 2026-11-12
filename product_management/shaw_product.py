@@ -1,5 +1,5 @@
 from Helper_functions_and_validations.inputs import get_str,get_num
-from Helper_functions_and_validations.validation import check_category
+from Helper_functions_and_validations.validation import check_is_category
 def get_info_to_search():
     search_by = get_str("enter search_by[id,name,category]")
     if search_by =="id":
@@ -15,7 +15,7 @@ def search_product_by_id(products,search_value):
     return [] 
 def search_product(products,search_by,search_value):
     result = []
-    if check_category(search_by)==False:
+    if check_is_category(search_by)==False:
         print("it's not correct!")
         return result
     for product in products:

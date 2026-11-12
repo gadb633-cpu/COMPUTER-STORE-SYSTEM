@@ -4,6 +4,7 @@ from product_management.add_product import add_product,save_product
 from db.products import PRODUCTS
 from product_management.shaw_all_products import shaw_all_products
 from product_management.shaw_product import search_product,get_info_to_search,display_products,search_product_by_id
+from product_management.update_product import update_product,get_info_to_search,get_info_to_update
 def product_management():
     status_loop = True
     while status_loop:
@@ -22,7 +23,8 @@ def product_management():
                 else:
                     display_products(search_product(PRODUCTS,info[0],info[1]))
             case 4:
-                pass
+                info_to_update = get_info_to_update()
+                print(update_product(PRODUCTS,info_to_update[0],info_to_update[1],info_to_update[2]))
             case 5:
                 pass
             case 6:
