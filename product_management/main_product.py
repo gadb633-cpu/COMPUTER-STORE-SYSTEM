@@ -12,6 +12,7 @@ def product_management():
             case 1:
                 new_product = add_product(PRODUCTS)
                 save_product(new_product,PRODUCTS)
+                print(new_product)
             case 2:
                 pass
             case 3:

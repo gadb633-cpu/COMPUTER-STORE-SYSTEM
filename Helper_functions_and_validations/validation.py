@@ -7,3 +7,8 @@ def is_positive(num):
     if num > 0:
         return True
     return False
+def is_name_exist(name,products):
+    for product in products:
+        if product["name"] ==name:
+            return False
+    return True    
