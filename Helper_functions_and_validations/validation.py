@@ -12,3 +12,7 @@ def is_name_exist(name,products):
         if product["name"] ==name:
             return False
     return True    
+def check_category(search_by):
+    if search_by in ["id","name","category"]:
+        return True
+    return False
