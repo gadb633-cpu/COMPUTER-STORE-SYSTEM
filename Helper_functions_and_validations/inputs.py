@@ -1,4 +1,4 @@
-from main_system.validation import val_not_empty,is_positive
+from Helper_functions_and_validations.validation import val_not_empty,is_positive
 def get_str(msg):
     status_loop = True
     while status_loop:

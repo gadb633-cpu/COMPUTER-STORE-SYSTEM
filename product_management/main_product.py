@@ -2,7 +2,7 @@ from shaw_results_and_menus.shaw_product_menu import shaw_product_menu
 from Helper_functions_and_validations.inputs import get_num
 from product_management.add_product import add_product,save_product
 from db.products import PRODUCTS
-
+from product_management.shaw_all_products import shaw_all_products
 def product_management():
     status_loop = True
     while status_loop:
@@ -12,9 +12,8 @@ def product_management():
             case 1:
                 new_product = add_product(PRODUCTS)
                 save_product(new_product,PRODUCTS)
-                print(new_product)
             case 2:
-                pass
+                shaw_all_products(PRODUCTS)
             case 3:
                 pass
             case 4:

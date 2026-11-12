@@ -1,7 +1,7 @@
 from Helper_functions_and_validations.inputs import get_num,get_str
 from Helper_functions_and_validations.validation import is_name_exist
 def add_product(products:list):
-    id_num = len(products +1)
+    id_num = len(products)+1
     status_loop = True
     while status_loop:
         name_product = get_str("enter name product")
