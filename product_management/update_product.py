@@ -1,6 +1,7 @@
 from product_management.shaw_product import search_product_by_id,get_info_to_search
 from Helper_functions_and_validations.validation import check_is_category
 from Helper_functions_and_validations.inputs import get_num,get_str
+
 def update_product(products,search_value,search_by,change_value):
     production = search_product_by_id(products,search_value)
     if check_is_category(search_by) == False:

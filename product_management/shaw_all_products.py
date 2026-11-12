@@ -1,3 +1,4 @@
 def shaw_all_products(products):
     for product in products:
-        print(product)
+        if product["active"] == True:
+            print(product)

@@ -5,6 +5,7 @@ from db.products import PRODUCTS
 from product_management.shaw_all_products import shaw_all_products
 from product_management.shaw_product import search_product,get_info_to_search,display_products,search_product_by_id
 from product_management.update_product import update_product,get_info_to_search,get_info_to_update
+from product_management.delete_product import delete_product
 def product_management():
     status_loop = True
     while status_loop:
@@ -26,7 +27,7 @@ def product_management():
                 info_to_update = get_info_to_update()
                 print(update_product(PRODUCTS,info_to_update[0],info_to_update[1],info_to_update[2]))
             case 5:
-                pass
+                print(delete_product(PRODUCTS))
             case 6:
                 break
             case _:
