@@ -3,6 +3,7 @@ from Helper_functions_and_validations.inputs import get_num
 from product_management.add_product import add_product,save_product
 from db.products import PRODUCTS
 from product_management.shaw_all_products import shaw_all_products
+from product_management.shaw_product import search_product,get_info_to_search,display_products
 def product_management():
     status_loop = True
     while status_loop:
@@ -15,7 +16,8 @@ def product_management():
             case 2:
                 shaw_all_products(PRODUCTS)
             case 3:
-                pass
+                info = get_info_to_search()
+                display_products(search_product(PRODUCTS,info[0],info[1]))
             case 4:
                 pass
             case 5:
@@ -24,6 +26,3 @@ def product_management():
                 break
             case _:
                 print("choose only between 1-6")
-
-
-    
